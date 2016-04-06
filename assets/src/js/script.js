@@ -32,7 +32,6 @@
 		direction : 0 ,// direction of scroll 1)up -1)down 0)static
 		stateObj : {},
 		i18n : null,
-		noBrain : {} 
 	};
 
 	FBZ.view = {
@@ -44,7 +43,8 @@
 		$block				:$('.block'),
 		$langBtn			:$('.lang-btn'),
 		$footer				:$('footer'),
-		$scrollIcon 		:$('.intro-scroll-icon')
+		$scrollIcon 		:$('.intro-scroll-icon'),
+		$pagination			:$('.onepage-pagination')
 	};
 
 	FBZ.control = {
@@ -58,9 +58,27 @@
 			FBZ.control.checkURL();
 			FBZ.control.disappearScrollIcon();
 			FBZ.control.interactiveBG();
-
+			FBZ.control.replaceIcons();
 		},
 
+		replaceIcons : function () { 
+
+			console.log(FBZ.view.$pagination.children());
+			console.dir(FBZ.view.$pagination.children());
+
+			var icons = ["home-icon","take-icon","side-icon","tele-icon","contact-icon",]
+
+			var paginationBtns = FBZ.view.$pagination.children();
+
+
+			for (var i = 0 ; paginationBtns.length < i ; i++) { 
+
+				console.log("replacing : ",paginationBtns[i]);
+				paginationBtns[i].css('background:','url(/assets/img/'+icons[i]+'.svg)');
+			};
+
+			//	background: url(/assets/img/home-icon.svg);
+		}, 
 		interactiveBG : function () {
 
 			$(".bg").interactive_bg({
@@ -71,7 +89,6 @@
 			   wrapContent: false         // This option let you choose whether you want everything inside to reacts to your cursor, or just the background. Toggle it to true to have every elements inside reacts the same way. The default value is false
 			 });
 			$(".bg").interactive_bg(); // function call
-
 		},
 
 		disappearScrollIcon : function ()  { 

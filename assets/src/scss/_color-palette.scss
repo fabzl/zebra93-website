@@ -24,31 +24,34 @@ $no-hardpink				: #ff1f71;
 
 $zebra-blue					: #53d3d7;
 $zebra-green				: #b1d37c;
+$zebra-darkgreen			: #dde2c9;
 $zebra-white 				: #faf8ec;
+$zebra-pink					: #e3b6bf;
+$zebra-darkblue				: #1b0c75;
 //003236
 
 // Color Scheme
-$color-primary                : $no-black;
+$color-primary                : $zebra-white;
 
-$color-secondary              : $no-palegray;
-$color-highlight              : $no-gray;
+$color-secondary              : $zebra-blue;
+$color-highlight              : $zebra-green;
 
 
 // Common colors
-$color-text                   : #FFF;
-$color-bg                     : #f1f1f1;
-$color-border                 : #ddd;
+$color-text                   : $zebra-blue;
+$color-bg                     : $zebra-white;
+$color-border                 : $zebra-blue;
 
 // Text Selection
-$color-selection              : #fff;
-$color-selection-bg           : $no-palegray;
+$color-selection              :  $zebra-white;
+$color-selection-bg           :  $zebra-green;
 
 
 // Links
-$color-link-default           : $no-palegray;
-$color-link-visited           : $no-palegray;
-$color-link-hover             : darken($no-palegray, 20%);
-$color-link-active            : darken($no-palegray, 20%);
+$color-link-default           : $zebra-blue;
+$color-link-visited           : $zebra-blue;
+$color-link-hover             : darken($zebra-green, 30%);
+$color-link-active            : darken($zebra-green, 30%);
 
 
 // <hr> border color
