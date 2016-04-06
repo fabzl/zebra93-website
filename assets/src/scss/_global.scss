@@ -1,3 +1,12 @@
+.endmk-logo {
+
+
+	position:absolute;
+	background-color: $zebra-blue;
+	top: 10vh;
+	left: 10vw;
+}
+
 
 // social icons 
 button {
@@ -148,18 +157,19 @@ h1 {
 	text-align:left;
 	//padding-left:5vw;
 	//margin-top: 6vw;
+	color:$zebra-blue;
+
 	&:before {
 		content: "";
 		text-decoration:underline;
 	}
 	&:hardpink { 
 
-		color:$no-hardpink;
 	}
 }
 h2 { 
 
-   font-family: 'aldrichregular';
+	font-family: Roboto;
    	font-size: 1.5em;
 
    	&.inverse { 
@@ -174,8 +184,9 @@ h2 {
 
 p { 
 
-	font-family: 'anonymous_proregular';
 	font-size: .7em;
+	font-family: Roboto;
+	text-transform: uppercase;
  }
 
 // plug in - page completes
@@ -205,8 +216,8 @@ body, .onepage-wrapper, html {
 
 .onepage-pagination {
 	position: absolute;
-	right: 10px;
-	top: 50vh;
+	right: 60px;
+	top: 15vh;
 	z-index: 5;
 	list-style: none;
 	margin: 0;
@@ -217,9 +228,9 @@ body, .onepage-wrapper, html {
 	text-align: center;
 }
 .onepage-pagination li a{
-	padding: 10px;
-	width: 4px;
-	height: 4px;
+	padding: 50px;
+	width: 20px;
+	height: 20px;
 	display: block;
 	cursor:pointer;
 
@@ -228,23 +239,31 @@ body, .onepage-wrapper, html {
 .onepage-pagination li a:before {
 	content: '';
 	position: absolute;
-	width: 4px;
-	height: 4px;
-	background: rgba($no-hardpink,.6);
-	border-radius: 10px;
+	width: 20px;
+	height: 20px;
+//	color: rgba($zebra-blue,1);
+	display: block;
+	text-indent: -9999px;
+	width: 100px;
+	height: 82px;
+	background: url(/assets/img/home-icon.svg);
+	background-size: 100px 82px;
+
+//	border-radius: 10px;
 	&:hover { 
-		color: $no-styleblue!important;
+	//	color: $no-styleblue!important;
 	}
 
 }
 
 .onepage-pagination li a.active:before {
-	width: 10px;
-	height: 10px;
-	background: none;
-	border: 1px solid 	$no-hardpink;
-	margin-top: -4px;
-	left: 8px;
+//	width: 50px;
+//	height: 50px;
+//	background: none;
+//	border: 1px solid 	$no-hardpink;
+//	margin-top: -50px;
+//	left: 70px;
+
 }
 
 .disabled-onepage-scroll, .disabled-onepage-scroll .wrapper {

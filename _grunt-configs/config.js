@@ -66,7 +66,7 @@ module.exports = {
 		grunticonDir : '<%=config.srcDir%>/grunticon' // <%=config.img.grunticonDir%>
 	},
 
-
+		
 	// Testing-related Grunt vars
 	// Add any other test vars in here
 	testing: {

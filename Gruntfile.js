@@ -16,6 +16,10 @@ module.exports = function (grunt) {
 	// Load grunt configurations automatically
 	var configs = require('load-grunt-configs')(grunt, options);
 
+
+
+
+
 	// Define the configuration for all the tasks
 	grunt.initConfig(configs);
 
