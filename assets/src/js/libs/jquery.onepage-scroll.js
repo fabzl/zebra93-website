@@ -353,9 +353,12 @@ var init_index = 0;
 
 		el.addClass("onepage-wrapper").css("position","relative");
 		$.each( sections, function(i) {
+
+
 			$(this).css({
 				position: "absolute",
 				top: topPos + "%"
+				
 			}).addClass("section").attr("data-index", i+1);
 
 
@@ -376,9 +379,15 @@ var init_index = 0;
 
 
 			if(settings.pagination == true) {
-				paginationList += "<li><a data-index='"+(i+1)+"'></a></li>"
+				paginationList += "<li><a style='background:url(/assets/img/"+FBZ.model.iconsList[i]+".svg)' data-index='"+(i+1)+"'></a></li>"
 			}
 		});
+				console.log($(this));
+				$(this).css( {
+					
+				});
+
+
 
 		el.swipeEvents().bind("swipeDown",  function(event){
 			if (!$("body").hasClass("disabled-onepage-scroll")) event.preventDefault();
@@ -395,6 +404,8 @@ var init_index = 0;
 			if( settings.direction == 'horizontal' ) {
 				posLeft = (el.find(".onepage-pagination").width() / 2) * -1;
 				el.find(".onepage-pagination").css("margin-left", posLeft);
+				 console.log(el.find(".onepage-pagination").index() );
+
 			} else {
 
 			//  console.log(FBZ.model.stageH,el.find(".onepage-pagination"));
@@ -440,7 +451,11 @@ var init_index = 0;
 				var page_index = $(this).data("index");
 		//		$.fn.replaceHistoryAndGo(settings, pos, next.data("index"));
 				el.moveTo(page_index);
-
+				
+				console.log($(this),page_index);
+				// $(this).css( {
+				// 	background: "url(/assets/img/"+FBZ.model.iconsList[page_index-1]+".svg)"
+				// });
 			});
 		}
 
@@ -493,6 +508,8 @@ var init_index = 0;
 
 			});
 		}
+
+		//FBZ.control.replaceIcons();
 		return false;
 	}
 

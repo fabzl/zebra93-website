@@ -32,6 +32,9 @@
 		direction : 0 ,// direction of scroll 1)up -1)down 0)static
 		stateObj : {},
 		i18n : null,
+		iconsList : ["home-icon","take-icon","side-icon","tele-icon","contact-icon"]
+
+	
 	};
 
 	FBZ.view = {
@@ -58,21 +61,24 @@
 			FBZ.control.checkURL();
 			FBZ.control.disappearScrollIcon();
 			FBZ.control.interactiveBG();
-			FBZ.control.replaceIcons();
 		},
 
 		replaceIcons : function () { 
 
-			console.log(FBZ.view.$pagination.children());
-			console.dir(FBZ.view.$pagination.children());
+		//	console.log(FBZ.view.$pagination.children());
+		//	console.dir(FBZ.view.$pagination.children());
 
-			var icons = ["home-icon","take-icon","side-icon","tele-icon","contact-icon",]
+			var icons = ["home-icon","take-icon","side-icon","tele-icon","contact-icon"];
 
-			var paginationBtns = FBZ.view.$pagination.children();
+			var paginationBtns = FBZ.view.$pagination.find('li');
+			console.log(paginationBtns);
+// 			FBZ.view.$pagination.find('li').each(function( index ) {
+//   					console.log( index + ": " + $( this ).text() );
+// });
+				FBZ.view.$pagination.css("display","none");
 
-
+			console.log(paginationBtns);
 			for (var i = 0 ; paginationBtns.length < i ; i++) { 
-
 				console.log("replacing : ",paginationBtns[i]);
 				paginationBtns[i].css('background:','url(/assets/img/'+icons[i]+'.svg)');
 			};
