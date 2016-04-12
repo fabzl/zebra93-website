@@ -1,10 +1,15 @@
+.zebra-pic {
+
+	width: 90%;
+}
+
 .is-hidden { 
 
 	display:none;
 }
 .text-container { 
 
-	width: 50%;
+	width: 90%;
 	margin: 0 auto;
 }
 
@@ -23,7 +28,7 @@
 	text-align:center;
 	margin:0 auto;
 	margin-top:40vh;
-	font-size:1em;
+	font-size:.8em;
 	color:$zebra-darkblue;
 	opacity:.6;
 
@@ -35,7 +40,6 @@ button {
 //	padding:5px;
 	font-size:.9em;
 	z-index:500;
-
 }
 
 .intro-time-icon { 
@@ -67,22 +71,9 @@ button {
 	//top: 50%;
 	transform: translateX(3%) translateY(-15vh);
 
-
 }
 
 
-
-.intro-background { 
-
-	position:absolute;
-	width:100vw;
-	top:30vh;
-	left:0;
-	transform:scale(1.5);
-	z-index:-100;
-	//height:100%;
-	width:100%;
-}
 
 .intro-palm01 {
 
@@ -162,7 +153,7 @@ button {
 
 // variables
 
-$transition: all 0.35s cubic-bezier(0.310, -0.105, 0.430, 1.590);
+$transition: all 0.35s ease-out;
 $size: 60px;
 
 .social-buttons {
@@ -359,8 +350,8 @@ body, .onepage-wrapper, html {
 
 .onepage-pagination {
 	position: absolute;
-	right: 30px;
-	top: 25vh;
+	left: 20px;
+	top: 200px;
 	z-index: 5;
 	list-style: none;
 	margin: 0;
@@ -371,32 +362,29 @@ body, .onepage-wrapper, html {
 	padding-top:10px;
 	text-align: center;
 }
-.onepage-pagination li a{
-	padding: 30px;
-	width: 20px;
-	height: 20px;
+
+.onepage-pagination li a {
+	padding: 10px;
+	width: 80px;
+	height: 80px;
 	display: block;
 	cursor:pointer;
-
-
 }
 .onepage-pagination li a:before {
 	content: '';
 	position: absolute;
 	width: 20px;
 	height: 20px;
-//	color: rgba($zebra-blue,1);
 	display: block;
 	text-indent: -9999px;
 	width: 100px;
 	height: 82px;
 //	background: url(/assets/img/home-icon.svg);
 	background-size: 100px 82px;
-
 //	border-radius: 10px;
-	&:hover { 
-	//	color: $no-styleblue!important;
-	}
+	// &:hover { 
+	// 	color: $no-styleblue!important;
+	// }
 
 }
 
@@ -445,17 +433,105 @@ body {
 	background-color: $color-bg;
 	//overflow:hidden;
 }
-
-
-.mainContent { 
+// bgs
+.contact-background { 
 
 	position:absolute;
 	top:0;
-	left:0;
+	z-index:-500;
 	height:100%;
-
+	width:100%;
 
 }
+
+.contact-background-content { 
+	width:100%;
+	background: url(/assets/img/intro_bg.svg);
+	background-size: 200%;
+	background-position:top center;
+	background-attachment: fixed;
+	overflow:visible;
+}
+
+.side-background { 
+
+	position:absolute;
+	top:0;
+	z-index:-500;
+	height:100%;
+	width:100%;
+
+}
+
+.side-background-content { 
+	width:100%;
+	background: url(/assets/img/intro_bg.svg);
+	background-size: 200%;
+	background-position:top center;
+	background-attachment: fixed;
+	overflow:visible;
+}
+
+.tele-background { 
+
+	position:absolute;
+	top:0;
+	z-index:-500;
+	height:100%;
+	width:100%;
+
+}
+
+.tele-background-content { 
+	width:100%;
+	background: url(/assets/img/intro_bg.svg);
+	background-size: 200%;
+	background-position:top center;
+	background-attachment: fixed;
+	overflow:visible;
+}
+
+.take-background { 
+
+	position:absolute;
+	top:0;
+	z-index:-500;
+	height:100%;
+	width:100%;
+
+}
+
+.take-background-content { 
+	width:100%;
+	background: url(/assets/img/intro_bg.svg);
+	background-size: 200%;
+	background-position:top center;
+	background-attachment: fixed;
+	overflow:visible;
+}
+
+
+.intro-background { 
+
+	position:absolute;
+	top:0;
+	z-index:-500;
+	height:100%;
+	width:100%;
+
+}
+
+.intro-background-content { 
+	width:100%;
+	background: url(/assets/img/intro_bg.svg);
+	background-size: 200%;
+	background-position:top center;
+	background-attachment: fixed;
+	overflow:visible;
+}
+
+
+
 
 .block { 
 
@@ -471,7 +547,9 @@ body {
 
 .has-padding  { 
 
-	padding: 10vw;
+	padding-left: 100px;
+	margin-top: 5vh;
+
 }
 
 .has-margin-top { 

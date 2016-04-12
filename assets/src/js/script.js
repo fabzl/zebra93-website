@@ -34,7 +34,6 @@
 		i18n : null,
 		iconsList : ["home-icon","take-icon","side-icon","tele-icon","contact-icon"]
 
-	
 	};
 
 	FBZ.view = {
@@ -47,7 +46,11 @@
 		$langBtn			:$('.lang-btn'),
 		$footer				:$('footer'),
 		$scrollIcon 		:$('.intro-scroll-icon'),
-		$pagination			:$('.onepage-pagination')
+		$pagination			:$('.onepage-pagination'),
+		$bg					:$('.intro-background-content'),
+		//youtubePlayerArray	:[$("#player1"),$("#player2"),$("#player3")],
+		$listen 			:$('.listenBtn')
+
 	};
 
 	FBZ.control = {
@@ -61,30 +64,78 @@
 			FBZ.control.checkURL();
 			FBZ.control.disappearScrollIcon();
 			FBZ.control.interactiveBG();
+			FBZ.control.activateBtns();
+		//	FBZ.control.youTubeControler();
+		},
+		activateBtns : function () { 
+
+
+
+			FBZ.view.$listen.click(function (){
+		//		var page_index = $(this).data("index");
+		// //		$.fn.replaceHistoryAndGo(settings, pos, next.data("index"));
+		// 		el.moveTo(page_index);
+				 $.moveTo(1);
+				 // $.fn.moveTo
+				
+				console.log($(this));
+				// $(this).css( {
+				// 	background: "url(/assets/img/"+FBZ.model.iconsList[page_index-1]+".svg)"
+				// });
+			});
+
+
 		},
 
-		replaceIcons : function () { 
+		youTubeControler : function () { 
 
-		//	console.log(FBZ.view.$pagination.children());
-		//	console.dir(FBZ.view.$pagination.children());
+		// 		// 2. This code loads the IFrame Player API code asynchronously.
+		// 	var tag = document.createElement('script');
 
-			var icons = ["home-icon","take-icon","side-icon","tele-icon","contact-icon"];
+		// 	tag.src = "https://www.youtube.com/iframe_api";
+		// 	var firstScriptTag = document.getElementsByTagName('script')[0];
+		// 	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-			var paginationBtns = FBZ.view.$pagination.find('li');
-			console.log(paginationBtns);
-// 			FBZ.view.$pagination.find('li').each(function( index ) {
-//   					console.log( index + ": " + $( this ).text() );
-// });
-				FBZ.view.$pagination.css("display","none");
+		//       // 3. This function creates an <iframe> (and YouTube player)
+		//       //    after the API code downloads.
+		//       var player;
+		//       console.log(player);
 
-			console.log(paginationBtns);
-			for (var i = 0 ; paginationBtns.length < i ; i++) { 
-				console.log("replacing : ",paginationBtns[i]);
-				paginationBtns[i].css('background:','url(/assets/img/'+icons[i]+'.svg)');
-			};
 
-			//	background: url(/assets/img/home-icon.svg);
-		}, 
+  //     function onYouTubeIframeAPIReady() {
+  //       player = new YT.Player('player', {
+  //         height: '90%',
+  //         width: '60%',
+  //         videoId: 'M7lc1UVf-VE',
+  //         events: {
+  //           'onReady': onPlayerReady,
+  //           'onStateChange': onPlayerStateChange
+  //         }
+  //       });
+  //     }
+
+  //     // 4. The API will call this function when the video player is ready.
+  //     function onPlayerReady(event) {
+  //       event.target.playVideo();
+  //     }
+
+  //     // 5. The API calls this function when the player's state changes.
+  //     //    The function indicates that when playing a video (state=1),
+  //     //    the player should play for six seconds and then stop.
+  //     var done = false;
+  //     function onPlayerStateChange(event) {
+  //       if (event.data == YT.PlayerState.PLAYING && !done) {
+  //         setTimeout(stopVideo, 6000);
+  //         done = true;
+  //       }
+  //     }
+  //     function stopVideo() {
+  //       player.stopVideo();
+  //     }
+
+		},
+
+
 		interactiveBG : function () {
 
 			$(".bg").interactive_bg({
@@ -145,6 +196,7 @@
 		resizeContentBlock : function () { 
 			FBZ.view.$block.css("width",FBZ.model.stageW);
 			FBZ.view.$block.css("height",FBZ.model.stageH);
+			FBZ.view.$bg.css("height",window.innerHeight*6);
 
 			// var dynamicPadding = ((FBZ.model.stageW+FBZ.model.stageH)*.5)*.075;
 			// 			FBZ.view.$block.css("padding",dynamicPadding);

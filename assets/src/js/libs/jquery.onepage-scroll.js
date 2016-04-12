@@ -26,7 +26,7 @@ var init_index = 0;
 
 	var defaults = {
 		sectionContainer: "section",
-		easing: "ease",
+		easing: "ease-out",
 		animationTime: 1000,
 		pagination: true,
 		updateURL: false,
@@ -125,6 +125,19 @@ var init_index = 0;
 				 "transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
 				 "transition": "all " + settings.animationTime + "ms " + settings.easing
 				});
+
+				// 	pos = pos*.5;
+
+				// FBZ.view.$bg.css({
+				// 	"-webkit-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
+				//  "-webkit-transition": "all " + settings.animationTime + "ms " + settings.easing,
+				//  "-moz-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
+				//  "-moz-transition": "all " + settings.animationTime + "ms " + settings.easing,
+				//  "-ms-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
+				//  "-ms-transition": "all " + settings.animationTime + "ms " + settings.easing,
+				//  "transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
+				//  "transition": "all " + settings.animationTime + "ms " + settings.easing
+				// });
 			}
 			$(this).one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
 				if (typeof settings.afterMove == 'function') settings.afterMove(index);

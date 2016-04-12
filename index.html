@@ -70,10 +70,13 @@ Zebra 93 - Take your time EP
 		<script src="/assets/dist/js/libs/modernizr.min.js"></script>
 	</head>
 	<body>
-
+			
 			<div id="mainContent" class="main container" role="main">
-				
+
 				<section class="intro block page1 " data-name="#home">
+					<div class="intro-background">
+						<div class="intro-background-content"></div>
+					</div>
 
 					<div class="text-logo center">
 						<img class="text-zebra-green" src="assets/img/zebra_logo_green.svg" alt="zebra logo"/>
@@ -83,25 +86,21 @@ Zebra 93 - Take your time EP
 						<img class="text-take-blue" src="assets/img/intro_take_text_blue.svg" alt="take your time"/>
 					</div>
 
-
+					<!-- <div id="player1"></div> -->
 <!-- 					<div class="intro-time-icon">
 						<img class="logo-init" src="assets/img/time_icon.svg" alt="take your time icon"/>
 					</div>
-
- -->
+-->
 					<div class="intro-palmtree">
 						<img class="intro-palm01 palm" src="assets/img/palm-01.svg" alt="palm tree"/>
 						<img class="intro-palm02 palm" src="assets/img/palm-02.svg" alt="palm tree 2 "/>
 					</div>
 
-					<div class="intro-background">
-						<img class="intro-background" src="assets/img/intro_bg.svg" alt="take your time icon"/>
-					</div>
 
 					<div class="intro-text-container">
 						<p class="intro-text">Summer is just under the horizon - and so are the warm, modular riffs of one of Latin America's most anticipated bands - ZEBRA 93. Born in the sun and baptised in the sea, Santiago's ZEBRA 93 journey to the hazy solstice of Chilean dream pop with a three-track EP titled 'Take Your Time'.</p>
 					</div>
-					<button class="listen">LISTEN</button> 
+					<button class="listenBtn">LISTEN</button> 
 
 					<div class="intro-chevron">
 						<img class="intro-chevron" src="assets/img/chevron_blue.svg" alt="take your time icon"/>
@@ -111,30 +110,40 @@ Zebra 93 - Take your time EP
 
 				<section class="take-your-time block has-padding page2" data-name="#takeyourtime">
 
-					<iframe width="80%"  height="80%" src="https://www.youtube.com/embed/-_1KgDMxTVy5I" frameborder="0" allowfullscreen></iframe>
-					
+					<div class="take-background">
+						<div class="take-background-content"></div>
+					</div>
+
+					<iframe width="90%"  height="80%" src="https://www.youtube.com/embed/1KgDMxTVy5I" frameborder="0" allowfullscreen></iframe>
+					<!-- <div id="player"></div> -->
+
 					<div class="text-container">
 
 						<h2 class="is-hidden">TAKE YOUR TIME</h2>
 					
-					<div class="section-title">
+				<!-- 	<div class="section-title">
 						<img class="section-title-svg" src="assets/img/time_text.svg" alt="take your time icon"/>
-					</div>
+					</div> -->
 						<p>Title track and psychedelic love letter, 'Take Your Time' tells a tale of passion worth patience. A beautiful collaboration with actress and vocalist, Andrea Velasco, the effervescent vocals take centre stage laying way for an analog voyage worth the wait.</p>
 					</div>
 				</section>
 
 				<section class="side-by-side block  has-padding page3" data-name="#sidebyside">
 
-					<iframe width="80%" height="80%" src="https://www.youtube.com/embed/-_MQJSg52iu1c" frameborder="0" allowfullscreen></iframe>
+					<div class="side-background">
+						<div class="side-background-content"></div>
+					</div>
+
+					<iframe width="90%" height="80%" src="https://www.youtube.com/embed/MQJSg52iu1c" frameborder="0" allowfullscreen></iframe>
+					<!-- <div id="player2"></div> -->
 
 					<div class="text-container">
 
 						<h2 class="is-hidden">SIDE BY SIDE</h2>
 
-						<div class="section-title">
+<!-- 						<div class="section-title">
 							<img class="section-title-svg" src="assets/img/side_text.svg" alt="side by side"/>
-						</div>
+						</div> -->
 
 
 						<p>'Side By Side' comes like a tropical evening tide. Gently floating on a sea of warm electric guitars, the melodic percussions make waves for another sun-kissed ballad with Andrea Velasco.</p>
@@ -143,15 +152,21 @@ Zebra 93 - Take your time EP
 				</section>
 
 				<section class="telepathic projects block has-padding page4" data-name="#telephatic">
-					<iframe width="80%" height="80%" src="https://www.youtube.com
-					/embed/-_InGQ5SQvgXk" frameborder="0" allowfullscreen></iframe>
-					
+
+					<div class="telepathic-background">
+						<div class="telepathic-background-content"></div>
+					</div>
+
+					<iframe width="90%" height="80%" src="https://www.youtube.com
+					/embed/InGQ5SQvgXk" frameborder="0" allowfullscreen></iframe>
+					<!-- <div id="player2"></div> -->
+
 					<div class="text-container">
 						<h2 class="is-hidden">TELEPATHIC</h2>
 						
-						<div class="section-title">
+<!-- 						<div class="section-title">
 							<img class="section-title-svg" src="assets/img/tele_text.svg" alt="telephatic"/>
-						</div>
+						</div> -->
 
 
 						<p>'Telepathic' is a journey through the humidity of desire. As the tempting vocals set against a calm of bright arpeggios, 'Telepathic' teleports to a moment of yearning and heat.</p>
@@ -160,6 +175,19 @@ Zebra 93 - Take your time EP
 
 
 				<section class="contact block page5" data-name="#contact">
+					<div class="contact-background">
+						<div class="contact-background-content"></div>
+					</div>
+
+					<picture class="zebra-pic">
+												<!--[if IE 9]><video style="display: none;"><![endif]-->
+												<source srcset="/assets/img/zebra93_website_big.jpg" media="(min-width: 1501px)">
+												<source srcset="/assets/img/zebra93_website_med.jpg" media="(min-width: 1001px)">
+												<source srcset="/assets/img/zebra93_website_small.jpg" media="(min-width: 501px)">
+												<source srcset="/assets/img/zebra93_website_mobile.jpg" media="(min-width: 320px)">
+												<!--[if IE 9]></video><![endif]-->
+												<img  class="dynamicImage"  srcset="/assets/img/zebra93_website_med.jpg" alt="Zebra 93 - band">
+					</picture>
 
 						<footer>
 							<h3 >© 2016 ALL RIGHTS RESERVED ENDMK | POWERED BY NULLØBJECT</h3>
