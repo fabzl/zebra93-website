@@ -1,3 +1,19 @@
+// @include respond-min($breakpoint-narrow) {
+// 		font-size:1.8em;
+// 		padding:11px;
+// 	}
+
+
+
+
+.onepage-pagination .active { 
+
+//   background-color: #FF0000!important;
+    border-radius: 50%;
+    background-color: rgba(white,.9)!important;
+    transition:$transition;
+}
+
 .zebra-pic {
 
 	width: 90%;
@@ -433,83 +449,7 @@ body {
 	background-color: $color-bg;
 	//overflow:hidden;
 }
-// bgs
-.contact-background { 
-
-	position:absolute;
-	top:0;
-	z-index:-500;
-	height:100%;
-	width:100%;
-
-}
-
-.contact-background-content { 
-	width:100%;
-	background: url(/assets/img/intro_bg.svg);
-	background-size: 200%;
-	background-position:top center;
-	background-attachment: fixed;
-	overflow:visible;
-}
-
-.side-background { 
-
-	position:absolute;
-	top:0;
-	z-index:-500;
-	height:100%;
-	width:100%;
-
-}
-
-.side-background-content { 
-	width:100%;
-	background: url(/assets/img/intro_bg.svg);
-	background-size: 200%;
-	background-position:top center;
-	background-attachment: fixed;
-	overflow:visible;
-}
-
-.tele-background { 
-
-	position:absolute;
-	top:0;
-	z-index:-500;
-	height:100%;
-	width:100%;
-
-}
-
-.tele-background-content { 
-	width:100%;
-	background: url(/assets/img/intro_bg.svg);
-	background-size: 200%;
-	background-position:top center;
-	background-attachment: fixed;
-	overflow:visible;
-}
-
-.take-background { 
-
-	position:absolute;
-	top:0;
-	z-index:-500;
-	height:100%;
-	width:100%;
-
-}
-
-.take-background-content { 
-	width:100%;
-	background: url(/assets/img/intro_bg.svg);
-	background-size: 200%;
-	background-position:top center;
-	background-attachment: fixed;
-	overflow:visible;
-}
-
+// bg
 
 .intro-background { 
 
@@ -518,6 +458,7 @@ body {
 	z-index:-500;
 	height:100%;
 	width:100%;
+	overflow:visible;
 
 }
 
@@ -525,9 +466,11 @@ body {
 	width:100%;
 	background: url(/assets/img/intro_bg.svg);
 	background-size: 200%;
-	background-position:top center;
-	background-attachment: fixed;
+	//background-position:50% 0;
+	//background-attachment: fixed;
 	overflow:visible;
+	height:100%;
+	background-repeat:no-repeat;
 }
 
 

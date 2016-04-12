@@ -64,27 +64,13 @@
 			FBZ.control.checkURL();
 			FBZ.control.disappearScrollIcon();
 			FBZ.control.interactiveBG();
-			FBZ.control.activateBtns();
 		//	FBZ.control.youTubeControler();
+			
 		},
-		activateBtns : function () { 
 
+		sectionMonitor : function (index) { 
 
-
-			FBZ.view.$listen.click(function (){
-		//		var page_index = $(this).data("index");
-		// //		$.fn.replaceHistoryAndGo(settings, pos, next.data("index"));
-		// 		el.moveTo(page_index);
-				 $.moveTo(1);
-				 // $.fn.moveTo
-				
-				console.log($(this));
-				// $(this).css( {
-				// 	background: "url(/assets/img/"+FBZ.model.iconsList[page_index-1]+".svg)"
-				// });
-			});
-
-
+			console.log("index :", index);
 		},
 
 		youTubeControler : function () { 
@@ -196,7 +182,7 @@
 		resizeContentBlock : function () { 
 			FBZ.view.$block.css("width",FBZ.model.stageW);
 			FBZ.view.$block.css("height",FBZ.model.stageH);
-			FBZ.view.$bg.css("height",window.innerHeight*6);
+			//FBZ.view.$bg.css("height",window.innerHeight*6);
 
 			// var dynamicPadding = ((FBZ.model.stageW+FBZ.model.stageH)*.5)*.075;
 			// 			FBZ.view.$block.css("padding",dynamicPadding);

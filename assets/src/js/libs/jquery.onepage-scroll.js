@@ -126,18 +126,19 @@ var init_index = 0;
 				 "transition": "all " + settings.animationTime + "ms " + settings.easing
 				});
 
-				// 	pos = pos*.5;
+					pos = -pos*.25;
 
-				// FBZ.view.$bg.css({
-				// 	"-webkit-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
-				//  "-webkit-transition": "all " + settings.animationTime + "ms " + settings.easing,
-				//  "-moz-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
-				//  "-moz-transition": "all " + settings.animationTime + "ms " + settings.easing,
-				//  "-ms-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
-				//  "-ms-transition": "all " + settings.animationTime + "ms " + settings.easing,
-				//  "transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
-				//  "transition": "all " + settings.animationTime + "ms " + settings.easing
-				// });
+				//console.log ("pos : ", pos ); 
+				FBZ.view.$bg.css({
+
+				"background-position": "50%"+ pos+"%", 
+				 "-webkit-transition": "all " + settings.animationTime*2 + "ms " + settings.easing,
+				 "-moz-transition": "all " + settings.animationTime*2 + "ms " + settings.easing,
+				 "-ms-transition": "all " + settings.animationTime*2 + "ms " + settings.easing,
+				 "transition": "all " + settings.animationTime*2 + "ms " + settings.easing
+
+
+				 FBZ.control.sectionMonitor(index);
 			}
 			$(this).one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
 				if (typeof settings.afterMove == 'function') settings.afterMove(index);
@@ -362,7 +363,9 @@ var init_index = 0;
 				lastAnimation = timeNow;
 		}
 
-		// Prepare everything before binding wheel scroll
+
+
+			// Prepare everything before binding wheel scroll
 
 		el.addClass("onepage-wrapper").css("position","relative");
 		$.each( sections, function(i) {
@@ -472,6 +475,19 @@ var init_index = 0;
 			});
 		}
 
+			FBZ.view.$listen.click(function (){
+		//		var page_index = $(this).data("index");
+		// //		$.fn.replaceHistoryAndGo(settings, pos, next.data("index"));
+		// 		el.moveTo(page_index);
+				 el.moveTo(2);
+				 // $.fn.moveTo
+				
+				console.log($(this));
+				// $(this).css( {
+				// 	background: "url(/assets/img/"+FBZ.model.iconsList[page_index-1]+".svg)"
+				// });
+			});
+
 
 		$(document).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event) {
 			event.preventDefault();
@@ -518,9 +534,10 @@ var init_index = 0;
 						default: return;
 					}
 				}
-
 			});
 		}
+	
+
 
 		//FBZ.control.replaceIcons();
 		return false;
