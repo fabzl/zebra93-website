@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="136.8 1.2 338.5 416.3" enable-background="new 136.8 1.2 338.5 416.3" xml:space="preserve">
-<rect x="136.8" y="1.2" fill="#CDF2CE" width="338.5" height="416.3"/>
-<polygon fill="#FAF8EC" points="363.9,206.7 274.3,269.2 136.8,291.6 136.8,21.9 165.1,52.7 177.2,108.7 322.8,132 "/>
+	 viewBox="136.8 1.2 338.5 786.2" enable-background="new 136.8 1.2 338.5 786.2" xml:space="preserve">
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="1451" y1="-5958.5" x2="1451" y2="794.9091" gradientTransform="matrix(0.1166 0 0 -0.1166 136.7647 92.3738)">
+	<stop  offset="0.1947" style="stop-color:#53D3D7"/>
+	<stop  offset="0.3014" style="stop-color:#65D8D6"/>
+	<stop  offset="0.4781" style="stop-color:#CDF2CE"/>
+</linearGradient>
+<rect x="136.8" y="-0.3" fill="url(#SVGID_1_)" width="338.5" height="787.7"/>
+<polygon fill="#FAF8EC" points="363.9,195.1 274.3,257.6 136.8,280 136.8,10.3 165.1,41.1 177.2,97.1 322.8,120.4 "/>
+<polygon fill="#FAF8EC" points="353.9,386.5 401.3,449 474,471.4 474,201.7 459,232.5 395,304 353.9,326.5 "/>
 </svg>

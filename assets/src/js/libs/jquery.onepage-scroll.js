@@ -132,18 +132,22 @@ var init_index = 0;
 				FBZ.view.$bg.css({
 
 				"background-position": "50%"+ pos+"%", 
-				 "-webkit-transition": "all " + settings.animationTime*2 + "ms " + settings.easing,
-				 "-moz-transition": "all " + settings.animationTime*2 + "ms " + settings.easing,
-				 "-ms-transition": "all " + settings.animationTime*2 + "ms " + settings.easing,
-				 "transition": "all " + settings.animationTime*2 + "ms " + settings.easing
+				 "-webkit-transition": "all " + settings.animationTime*2 + "ms ",
+				 "-moz-transition": "all " + settings.animationTime*2 + "ms ",
+				 "-ms-transition": "all " + settings.animationTime*2 + "ms ",
+				 "transition": "all " + settings.animationTime*2 + "ms "
 
+				
+			});
 
-				 FBZ.control.sectionMonitor(index);
+						 FBZ.control.sectionMonitor(index);
 			}
+
 			$(this).one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
 				if (typeof settings.afterMove == 'function') settings.afterMove(index);
 			});
 		}
+
 		$.fn.goToSectionByName = function () { 
 
 				var sections = $('section');
@@ -536,10 +540,6 @@ var init_index = 0;
 				}
 			});
 		}
-	
-
-
-		//FBZ.control.replaceIcons();
 		return false;
 	}
 

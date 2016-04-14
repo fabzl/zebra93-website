@@ -24,7 +24,6 @@
 		
 		windowH	: 0, //browser screen 
 		windowW	: 0,
-
 		stageH	: window.innerHeight, //total document size
 		stageW	: window.innerWidth,
 		currentSection : 0,
@@ -50,6 +49,7 @@
 		$bg					:$('.intro-background-content'),
 		//youtubePlayerArray	:[$("#player1"),$("#player2"),$("#player3")],
 		$listen 			:$('.listenBtn')
+	//	$curtain 			:$('.curtain')
 
 	};
 
@@ -63,9 +63,16 @@
 			FBZ.control.onResizeStage();
 			FBZ.control.checkURL();
 			FBZ.control.disappearScrollIcon();
-			FBZ.control.interactiveBG();
+		//	FBZ.control.interactiveBG();
 		//	FBZ.control.youTubeControler();
-			
+		//	FBZ.control.disappearCurtain();
+
+		},
+
+		disappearCurtain : function () { 
+
+	//			FBZ.view.$curtain.css(opacity,0);
+				console.log("curtain");
 		},
 
 		sectionMonitor : function (index) { 
@@ -124,14 +131,14 @@
 
 		interactiveBG : function () {
 
-			$(".bg").interactive_bg({
-			   strength: 25,              // Movement Strength when the cursor is moved. The higher, the faster it will reacts to your cursor. The default value is 25.
-			   scale: 1.05,               // The scale in which the background will be zoomed when hovering. Change this to 1 to stop scaling. The default value is 1.05.
-			   animationSpeed: "100ms",   // The time it takes for the scale to animate. This accepts CSS3 time function such as "100ms", "2.5s", etc. The default value is "100ms".
-			   contain: true,             // This option will prevent the scaled object/background from spilling out of its container. Keep this true for interactive background. Set it to false if you want to make an interactive object instead of a background. The default value is true.
-			   wrapContent: false         // This option let you choose whether you want everything inside to reacts to your cursor, or just the background. Toggle it to true to have every elements inside reacts the same way. The default value is false
-			 });
-			$(".bg").interactive_bg(); // function call
+			// $(".bg").interactive_bg({
+			//    strength: 25,              // Movement Strength when the cursor is moved. The higher, the faster it will reacts to your cursor. The default value is 25.
+			//    scale: 1.05,               // The scale in which the background will be zoomed when hovering. Change this to 1 to stop scaling. The default value is 1.05.
+			//    animationSpeed: "100ms",   // The time it takes for the scale to animate. This accepts CSS3 time function such as "100ms", "2.5s", etc. The default value is "100ms".
+			//    contain: true,             // This option will prevent the scaled object/background from spilling out of its container. Keep this true for interactive background. Set it to false if you want to make an interactive object instead of a background. The default value is true.
+			//    wrapContent: false         // This option let you choose whether you want everything inside to reacts to your cursor, or just the background. Toggle it to true to have every elements inside reacts the same way. The default value is false
+			//  });
+			// $(".bg").interactive_bg(); // function call
 		},
 
 		disappearScrollIcon : function ()  { 
@@ -195,9 +202,9 @@
 
 			$(".main").onepage_scroll({
 			   sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
-			   easing: "cubic-bezier(0.175, 0.885, 0.420, 1.310)",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
+			   easing: "ease-out",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
 			                                    // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
-			   animationTime: 900,             // AnimationTime let you define how long each section takes to animate
+			   animationTime: 700,             // AnimationTime let you define how long each section takes to animate
 			   pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
 			   updateURL: true,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
 			   beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
