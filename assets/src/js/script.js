@@ -48,7 +48,8 @@
 		$pagination			:$('.onepage-pagination'),
 		$bg					:$('.intro-background-content'),
 		//youtubePlayerArray	:[$("#player1"),$("#player2"),$("#player3")],
-		$listen 			:$('.listenBtn')
+		$listen 			:$('.listenBtn'),
+		$floatersContainer  :$('.floaters-container')
 	//	$curtain 			:$('.curtain')
 
 	};
@@ -66,6 +67,29 @@
 		//	FBZ.control.interactiveBG();
 		//	FBZ.control.youTubeControler();
 		//	FBZ.control.disappearCurtain();
+			FBZ.control.particuleSystem();
+
+
+
+		},
+
+		particuleSystem : function () { 
+
+			console.log(FBZ.view.$floatersContainer.children);
+
+				var diagonalDistance  = Math.sqrt( (FBZ.model.stageH*FBZ.model.stageH) + (FBZ.model.stageW*FBZ.model.stageW) );
+				console.log(diagonalDistance);
+
+				  $(".particule").each(function () {
+    				   console.log("FW");
+     console.log($(this),$(this).width(),$(this).height());
+     				// var initPointX = 
+				// var initPointY =
+				// var finalPointX = 
+				// var finalPointY 
+    });
+
+
 
 		},
 
