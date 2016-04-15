@@ -15,6 +15,7 @@
 // $bp-wide              : 992;  // Set in px
 // $bp-huge              : 1600; // Set in px
 
+$size: 60px;
 
 $transition: all 0.5s ease-out;
 
@@ -27,17 +28,49 @@ $transition: all 0.5s ease-out;
 
 .floaters-container {
 	z-index: 50;
-	width: 100%
+	width: 100%;
 }
 
 .particule01 {
 	position:absolute;
+	top:0;
+	left:0;
+	opacity:1;
+	animation: particuleMove 20s linear;
+ //  animation-duration: 2s;
+ //   animation-fill-mode:forwards;
+ 	animation-iteration-count:infinite;
 
 }
+
+@keyframes particuleMove {
+    0% {
+    	transform:translateX(-100%)translateY(75%);
+    }
+    100% {
+    	transform:translateX(150%)translateY(-75%);
+    }
+}
+
 
 
 .particule02 {
 	position:absolute;
+	top:0;
+	left:0;
+	opacity:1;
+	animation: particuleMove 20s linear 3s;
+ 	animation-iteration-count:infinite;
+	
+}
+
+@keyframes particuleMove {
+    0% {
+    	transform:translateX(-100%)translateY(75%);
+    }
+    100% {
+    	transform:translateX(175%)translateY(-75%);
+    }
 }
 
 
@@ -504,7 +537,7 @@ p {
 	font-family: Roboto;
 	text-transform: uppercase;
 
-	
+
  }
 
 
@@ -727,18 +760,19 @@ body {
 
 .has-padding  { 
 
-	padding-left: 100px;
-	margin-top: 5vh;
-
+	padding-left: 60px;
+	margin-top: 25%;
 	@include respond-min($bp-narrow) {
 		padding-left: 60px;
-		margin-top: 10px;
+		margin-top: 25%;
 		}
 	@include respond-min($bp-mid) {
 		padding-left: 100px;
-		margin-top: 5vh;
+			margin-top: 5vh;
 		}
 	@include respond-min($bp-wide) {
+			margin-top: 5vh;
+
 		}
 	@include respond-min($bp-huge) {
 		}
