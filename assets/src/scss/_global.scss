@@ -17,7 +17,29 @@
 
 
 $transition: all 0.5s ease-out;
-$size: 60px;
+
+
+.contact-mailto-link { 
+
+	margin-top:500px;
+
+}
+
+.floaters-container {
+	z-index: 50;
+	width: 100%
+}
+
+.particule01 {
+	position:absolute;
+
+}
+
+
+.particule02 {
+	position:absolute;
+}
+
 
 
 .youtube-iframe { 
@@ -26,11 +48,11 @@ $size: 60px;
 	height:80%;
 		@include respond-min($bp-narrow) {
 			width:95%;
-			height:75%;
+			height:35%;
 		}
 		@include respond-min($bp-mid) {
 			width:90%;
-			height:80%;
+			height:75%;
 	}
 }
 
@@ -165,22 +187,48 @@ button {
 
 .intro-palm01 {
 
-	top:-20vh;
+	top:-30vh;
 	left:-40vw;
 	transform: scale(.6);
+	@include respond-min($bp-narrow) {
+		top:-20vh;
+	}
+	@include respond-min($bp-mid) {
+		top:-25vh;
+	}
+
+	@include respond-min($bp-wide) {
+		top:-30vh;
+	}
+
+	@include respond-min($bp-huge) {
+	}
 }
 
 .intro-palm02 {
 
-	top:-50vh;
-	right:-30vw;
+	top:-100vh;
+	right:-40vw;
 	transform: scale(.6);
+	@include respond-min($bp-narrow) {
+		top:-50vh;
+	}
+	@include respond-min($bp-mid) {
+		top:-70vh;
+	}
+
+	@include respond-min($bp-wide) {
+		top:-100vh;
+	}
+
+	@include respond-min($bp-huge) {
+	}
 
 }
 .contact-palm03 {
 
-	bottom:0px;
-	left:0px;
+	bottom: -180px;
+	left: -440px;
 	transform: scale(.5);
 	opacity:0.5;
 	max-height:500px;
@@ -189,11 +237,14 @@ button {
 
 .contact-palm04 {
 
-	bottom:0;
-	right:0;
-	transform: scale(.6);
+	bottom: -190px;
+	right: -470px;
 	opacity:0.5;
 	max-height:500px;
+	transform: scale(0.6) rotate(-50deg);
+
+
+
 
 }
 
@@ -277,17 +328,14 @@ button {
 // social icons 
 button {
 
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
 	background-color: rgba($zebra-blue,0.5);
 	padding: 10px 30px;
 	font-size:0.7em;
 	letter-spacing: 0.3em;
 }
-
-
-
 
 
 .social-buttons {
@@ -452,10 +500,44 @@ h2 {
 
 p { 
 
-	font-size: .7em;
+	font-size: .9em;
 	font-family: Roboto;
 	text-transform: uppercase;
+
+	
  }
+
+
+.endmk-footer-links {
+	transform:skewY(2deg);
+	margin-top:25px;
+	span { 
+		@include respond-min($bp-narrow) {
+			display:block;
+		}
+		@include respond-min($bp-mid) {
+			display:block;
+		}
+		@include respond-min($bp-wide) {
+			display:inline;
+		}
+		@include respond-min($bp-huge) {
+			display:inline;
+		}
+
+	}
+	a { 
+		padding: 5px 5px 0px 5px;
+		font-size:0.7em;
+		color:$zebra-white!important;
+		border-left: 1px solid $zebra-white;
+		&:first-child { 
+
+			border-left:none;
+		
+		}
+	}
+}
 
 // plug in - page completes
 
@@ -607,7 +689,7 @@ body {
 	width:100%;
 	background: url(/assets/img/intro_bg.svg);
 	background-size: 200%;
-	//background-position:50% 0;
+	background-position:50% 0;
 	//background-attachment: fixed;
 	overflow:visible;
 	height:100%;
@@ -745,13 +827,31 @@ header {
 
 }
 
-.icon-tumblr:before {
-    content: "\e911";
-}
 
 .icon-facebook:before {
     content: "\e90f";
 }
+
+.icon-twitter:before {
+    content: "\e903";
+}
+.icon-instagram2:before {
+    content: "\e901";
+}
+.icon-facebook:before {
+    content: "\e904";
+}
+.icon-instagram:before {
+    content: "\e900";
+}
+
+.icon-soundcloud:before {
+    content: "\e905";
+}
+
+
+
+
 
 
 
@@ -820,7 +920,6 @@ footer {
 	h3 { 
 		transform:skewY(2deg);
 		font-size:0.6em;
-		margin-top:50px;
 		color:black!important;
 	}
 	a { 
@@ -915,8 +1014,3 @@ footer {
 	//height:100px;
 }
 
-
-.contact-mailto-link { 
-
-	color:$no-black;
-}
