@@ -64,53 +64,54 @@
 			FBZ.control.onResizeStage();
 			FBZ.control.checkURL();
 			FBZ.control.disappearScrollIcon();
-		//	FBZ.control.interactiveBG();
-		//	FBZ.control.youTubeControler();
-		//	FBZ.control.disappearCurtain();
-			FBZ.control.particuleSystem();
-
-
+			FBZ.control.youTubeControler();
+			FBZ.control.onOrientationChange();
 
 		},
 
-		particuleSystem : function () { 
-
-			console.log(FBZ.view.$floatersContainer.children);
-
-				var diagonalDistance  = Math.sqrt( (FBZ.model.stageH*FBZ.model.stageH) + (FBZ.model.stageW*FBZ.model.stageW) );
-				console.log(diagonalDistance);
-
-				  $(".particule").each(function () {
-    				   console.log("FW");
-     console.log($(this),$(this).width(),$(this).height());
-     				// var initPointX = 
-				// var initPointY =
-				// var finalPointX = 
-				// var finalPointY 
-    });
 
 
-
-		},
-
-		disappearCurtain : function () { 
-
-	//			FBZ.view.$curtain.css(opacity,0);
-				console.log("curtain");
-		},
 
 		sectionMonitor : function (index) { 
 
 			console.log("index :", index);
+			if (index == 5 )  {
+
+				FBZ.control.displayContact(1);
+		//		console.log("case 5");
+			}else {
+
+				if($('.zebra-pic').css('opacity') != 0 ) {
+					FBZ.control.displayContact(0);
+			}
+	//			console.log("not case 5");
+			}
+
+		},
+
+		displayContact : function (value)  {
+
+			$('.zebra-pic').css('opacity',value);
 		},
 
 		youTubeControler : function () { 
 
-		// 		// 2. This code loads the IFrame Player API code asynchronously.
-		// 	var tag = document.createElement('script');
 
-		// 	tag.src = "https://www.youtube.com/iframe_api";
-		// 	var firstScriptTag = document.getElementsByTagName('script')[0];
+			var playerObj1 = document.getElementById("ytp1");
+			console.log(playerObj1);
+
+
+			playerObj1.addEventListener("onStateChange", "stopCycle");
+
+			function stopCycle(event) {
+				alert('Stopped!');
+			}
+
+				// 2. This code loads the IFrame Player API code asynchronously.
+		 	var tag = document.createElement('script');
+
+		 //	tag.src = "https://www.youtube.com/iframe_api";
+		//	var firstScriptTag = document.getElementsByTagName('script')[0];
 		// 	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 		//       // 3. This function creates an <iframe> (and YouTube player)
@@ -153,6 +154,23 @@
 		},
 
 
+		onOrientationChange : function () { 
+			screen.orientation.addEventListener('change', function() { console.log('new orientation is ', screen.orientation.type); })
+		//	console.dir(screen);
+		//	screen.lock('portrait-primary');
+//			screen.lockOrientation("portrait-primary");
+			//screen.orientation.lock("portrait-primary");
+
+				screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
+
+				//	if (screen.lockOrientationUniversal("portrait-primary")) {
+		  // orientation was locked
+		// } else {
+		//   // orientation lock failed
+		// }
+
+		}, 
+
 		interactiveBG : function () {
 
 			// $(".bg").interactive_bg({
@@ -191,6 +209,22 @@
 			FBZ.model.stageH = FBZ.control.getHeight(FBZ.view.$stage);
 			FBZ.model.stageW = FBZ.control.getWidth(FBZ.view.$stage);
 		//	console.log("def stage", FBZ.model.stageH, FBZ.model.stageW );
+			//screen.screen.lockOrientation('portrait');
+		//	screen.orientation.addEventListener('change', function() { console.log('new orientation is ', screen.orientation.type); })
+		//	console.dir(screen);
+		//	screen.lock('portrait-primary');
+//			screen.lockOrientation("portrait-primary");
+			//screen.orientation.lock("portrait-primary");
+
+// 		screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
+
+// 			if (screen.lockOrientationUniversal("portrait-primary")) {
+//   // orientation was locked
+// } else {
+//   // orientation lock failed
+// }
+
+
 		},
 
 		onResizeStage : function ()  { 
@@ -202,9 +236,9 @@
 				
 				// for moving background obj
 				 $(".bg > .ibg-bg").css({
-			        width: $(window).outerWidth(),
-			        height: $(window).outerHeight()
-			      })
+					width: $(window).outerWidth(),
+					height: $(window).outerHeight()
+				  })
 
 			}.debounce(150));
 
@@ -227,7 +261,7 @@
 			$(".main").onepage_scroll({
 			   sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
 			   easing: "ease-out",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
-			                                    // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+												// "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
 			   animationTime: 700,             // AnimationTime let you define how long each section takes to animate
 			   pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
 			   updateURL: true,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
@@ -236,8 +270,8 @@
 			   loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
 			   keyboard: true,                  // You can activate the keyboard controls
 			   responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
-			                                    // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
-			                                    // the browser's width is less than 600, the fallback will kick in.
+												// you want the responsive fallback to be triggered. For example, set this to 600 and whenever
+												// the browser's width is less than 600, the fallback will kick in.
 			   direction: "vertical",            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
 			});
 
@@ -280,24 +314,24 @@ var i18n;
 
 // debounce prototype
 Function.prototype.debounce = function (milliseconds) {
-    var baseFunction = this,
-        timer = null,
-        wait = milliseconds;
+	var baseFunction = this,
+		timer = null,
+		wait = milliseconds;
 
-    return function () {
-        var self = this,
-            args = arguments;
+	return function () {
+		var self = this,
+			args = arguments;
 
-        function complete() {
-            baseFunction.apply(self, args);
-            timer = null;
-        }
+		function complete() {
+			baseFunction.apply(self, args);
+			timer = null;
+		}
 
-        if (timer) {
-            clearTimeout(timer);
-        }
+		if (timer) {
+			clearTimeout(timer);
+		}
 
-        timer = setTimeout(complete, wait);
-    };
+		timer = setTimeout(complete, wait);
+	};
 };
 

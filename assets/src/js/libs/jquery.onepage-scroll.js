@@ -402,7 +402,7 @@ var init_index = 0;
 				paginationList += "<li><a style='background:url(/assets/img/"+FBZ.model.iconsList[i]+".svg)' data-index='"+(i+1)+"'></a></li>"
 			}
 		});
-				console.log($(this));
+			//	console.log($(this));
 				$(this).css( {
 					
 				});
@@ -424,7 +424,7 @@ var init_index = 0;
 			if( settings.direction == 'horizontal' ) {
 				posLeft = (el.find(".onepage-pagination").width() / 2) * -1;
 				el.find(".onepage-pagination").css("margin-left", posLeft);
-				 console.log(el.find(".onepage-pagination").index() );
+			//	 console.log(el.find(".onepage-pagination").index() );
 
 			} else {
 
@@ -472,7 +472,7 @@ var init_index = 0;
 		//		$.fn.replaceHistoryAndGo(settings, pos, next.data("index"));
 				el.moveTo(page_index);
 				
-				console.log($(this),page_index);
+			//	console.log($(this),page_index);
 				// $(this).css( {
 				// 	background: "url(/assets/img/"+FBZ.model.iconsList[page_index-1]+".svg)"
 				// });
@@ -486,7 +486,7 @@ var init_index = 0;
 				 el.moveTo(2);
 				 // $.fn.moveTo
 				
-				console.log($(this));
+				//console.log($(this));
 				// $(this).css( {
 				// 	background: "url(/assets/img/"+FBZ.model.iconsList[page_index-1]+".svg)"
 				// });
