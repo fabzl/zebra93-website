@@ -66,10 +66,7 @@
 			FBZ.control.disappearScrollIcon();
 			FBZ.control.youTubeControler();
 			FBZ.control.onOrientationChange();
-
 		},
-
-
 
 
 		sectionMonitor : function (index) { 
