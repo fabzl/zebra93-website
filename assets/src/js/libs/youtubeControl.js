@@ -96,7 +96,6 @@ function onYoutubeStateChange (e) {
 				player1.pauseVideo();
 				player2.pauseVideo();
 				player3.pauseVideo();
-		
 		}
 	}
 
