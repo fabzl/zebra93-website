@@ -20,6 +20,7 @@ var next = 0;
 var prev = 0;
 var pos;
 var init_index = 0;
+var publicEl
 
 
 !function($){
@@ -140,7 +141,8 @@ var init_index = 0;
 				
 			});
 
-						 FBZ.control.sectionMonitor(index);
+						FBZ.control.sectionMonitor(index);
+
 			}
 
 			$(this).one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
@@ -203,7 +205,9 @@ var init_index = 0;
 			}
 
 		$.fn.moveDown = function() {
-			var el = $(this)
+			var el = $(this);
+			console.log(el);
+
 			index = $(settings.sectionContainer +".active").data("index");
 			current = $(settings.sectionContainer + "[data-index='" + index + "']");
 			next = $(settings.sectionContainer + "[data-index='" + (index + 1) + "']");

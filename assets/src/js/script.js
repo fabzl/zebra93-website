@@ -64,12 +64,17 @@
 			FBZ.control.onResizeStage();
 			FBZ.control.checkURL();
 			FBZ.control.disappearScrollIcon();
-			FBZ.control.youTubeControler();
 			FBZ.control.onOrientationChange();
 		},
 
 
 		sectionMonitor : function (index) { 
+
+
+
+			checkIfSomethingIsPlaying();
+
+			playYoutubeVideo(index);
 
 			console.log("index :", index);
 			if (index == 5 )  {
@@ -91,93 +96,22 @@
 			$('.zebra-pic').css('opacity',value);
 		},
 
-		youTubeControler : function () { 
-
-
-			var playerObj1 = document.getElementById("ytp1");
-			console.log(playerObj1);
-
-
-			playerObj1.addEventListener("onStateChange", "stopCycle");
-
-			function stopCycle(event) {
-				alert('Stopped!');
-			}
-
-				// 2. This code loads the IFrame Player API code asynchronously.
-		 	var tag = document.createElement('script');
-
-		 //	tag.src = "https://www.youtube.com/iframe_api";
-		//	var firstScriptTag = document.getElementsByTagName('script')[0];
-		// 	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-		//       // 3. This function creates an <iframe> (and YouTube player)
-		//       //    after the API code downloads.
-		//       var player;
-		//       console.log(player);
-
-
-  //     function onYouTubeIframeAPIReady() {
-  //       player = new YT.Player('player', {
-  //         height: '90%',
-  //         width: '60%',
-  //         videoId: 'M7lc1UVf-VE',
-  //         events: {
-  //           'onReady': onPlayerReady,
-  //           'onStateChange': onPlayerStateChange
-  //         }
-  //       });
-  //     }
-
-  //     // 4. The API will call this function when the video player is ready.
-  //     function onPlayerReady(event) {
-  //       event.target.playVideo();
-  //     }
-
-  //     // 5. The API calls this function when the player's state changes.
-  //     //    The function indicates that when playing a video (state=1),
-  //     //    the player should play for six seconds and then stop.
-  //     var done = false;
-  //     function onPlayerStateChange(event) {
-  //       if (event.data == YT.PlayerState.PLAYING && !done) {
-  //         setTimeout(stopVideo, 6000);
-  //         done = true;
-  //       }
-  //     }
-  //     function stopVideo() {
-  //       player.stopVideo();
-  //     }
-
-		},
-
 
 		onOrientationChange : function () { 
 			screen.orientation.addEventListener('change', function() { console.log('new orientation is ', screen.orientation.type); })
-		//	console.dir(screen);
-		//	screen.lock('portrait-primary');
-//			screen.lockOrientation("portrait-primary");
-			//screen.orientation.lock("portrait-primary");
-
-				screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
-
-				//	if (screen.lockOrientationUniversal("portrait-primary")) {
-		  // orientation was locked
-		// } else {
-		//   // orientation lock failed
-		// }
 
 		}, 
 
 		interactiveBG : function () {
 
-			// $(".bg").interactive_bg({
-			//    strength: 25,              // Movement Strength when the cursor is moved. The higher, the faster it will reacts to your cursor. The default value is 25.
-			//    scale: 1.05,               // The scale in which the background will be zoomed when hovering. Change this to 1 to stop scaling. The default value is 1.05.
-			//    animationSpeed: "100ms",   // The time it takes for the scale to animate. This accepts CSS3 time function such as "100ms", "2.5s", etc. The default value is "100ms".
-			//    contain: true,             // This option will prevent the scaled object/background from spilling out of its container. Keep this true for interactive background. Set it to false if you want to make an interactive object instead of a background. The default value is true.
-			//    wrapContent: false         // This option let you choose whether you want everything inside to reacts to your cursor, or just the background. Toggle it to true to have every elements inside reacts the same way. The default value is false
-			//  });
-			// $(".bg").interactive_bg(); // function call
+			$(".intro-background-content").interactive_bg({
+			   strength: 25,              // Movement Strength when the cursor is moved. The higher, the faster it will reacts to your cursor. The default value is 25.
+			   scale: 1.05,               // The scale in which the background will be zoomed when hovering. Change this to 1 to stop scaling. The default value is 1.05.
+			   animationSpeed: "100ms",   // The time it takes for the scale to animate. This accepts CSS3 time function such as "100ms", "2.5s", etc. The default value is "100ms".
+			   contain: true,             // This option will prevent the scaled object/background from spilling out of its container. Keep this true for interactive background. Set it to false if you want to make an interactive object instead of a background. The default value is true.
+			   wrapContent: false         // This option let you choose whether you want everything inside to reacts to your cursor, or just the background. Toggle it to true to have every elements inside reacts the same way. The default value is false
+			 });
+			$(".intro-background-content").interactive_bg(); // function call
 		},
 
 		disappearScrollIcon : function ()  { 
