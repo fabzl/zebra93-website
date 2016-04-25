@@ -9,8 +9,9 @@
 var player1,
 		player2,
 		player3,
+		player4,
 		currentVideo,
-		players = [player1,player2,player3],
+		players = [player1,player2,player3,player4],
 		youtubeAPILoaded = false;
 
 function onYouTubeIframeAPIReady() {
@@ -37,6 +38,16 @@ function onYouTubeIframeAPIReady() {
 				}
 		});
 		player3 = new YT.Player('ytp3', {
+				videoId: 'InGQ5SQvgXk',
+				playerVars: {
+						color: 'black',
+				},
+				events: {
+						onReady: onYoutubeReady,
+						onStateChange: onYoutubeStateChange
+				}
+		});
+		player4 = new YT.Player('ytp4', {
 				videoId: 'InGQ5SQvgXk',
 				playerVars: {
 						color: 'black',
@@ -96,6 +107,8 @@ function onYoutubeStateChange (e) {
 				player1.pauseVideo();
 				player2.pauseVideo();
 				player3.pauseVideo();
+				player4.pauseVideo();
+
 		}
 	}
 
@@ -103,17 +116,19 @@ function onYoutubeStateChange (e) {
 	function playYoutubeVideo(index) {
 
 
-		if (youtubeAPILoaded) { 
-			if(index === 2 ) { 
+		if (youtubeAPILoaded) {
+			if(index === 2 ) {
 				player1.playVideo();
 
-			}else if (index === 3 ) { 
+			}else if (index === 3 ) {
 				player2.playVideo();
 			
-			}else if (index === 4 )  {
+			}else if (index === 4 ) {
 				player3.playVideo();
 			}
-		}
+			}else if (index === 5 ) {
+				player4.playVideo();
+			}
 	}
 
 

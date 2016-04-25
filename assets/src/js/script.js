@@ -31,7 +31,7 @@
 		direction : 0 ,// direction of scroll 1)up -1)down 0)static
 		stateObj : {},
 		i18n : null,
-		iconsList : ["home-icon","take-icon","side-icon","tele-icon","contact-icon"]
+		iconsList : ["home-icon","take-icon","side-icon","tele-icon","retake-icon","contact-icon"]
 
 	};
 
@@ -47,10 +47,8 @@
 		$scrollIcon 		:$('.intro-scroll-icon'),
 		$pagination			:$('.onepage-pagination'),
 		$bg					:$('.intro-background-content'),
-		//youtubePlayerArray	:[$("#player1"),$("#player2"),$("#player3")],
 		$listen 			:$('.listenBtn'),
 		$floatersContainer  :$('.floaters-container')
-	//	$curtain 			:$('.curtain')
 
 	};
 
@@ -77,7 +75,7 @@
 			playYoutubeVideo(index);
 
 			console.log("index :", index);
-			if (index == 5 )  {
+			if (index == 6 )  {
 
 				FBZ.control.displayContact(1);
 		//		console.log("case 5");
@@ -139,22 +137,6 @@
 
 			FBZ.model.stageH = FBZ.control.getHeight(FBZ.view.$stage);
 			FBZ.model.stageW = FBZ.control.getWidth(FBZ.view.$stage);
-		//	console.log("def stage", FBZ.model.stageH, FBZ.model.stageW );
-			//screen.screen.lockOrientation('portrait');
-		//	screen.orientation.addEventListener('change', function() { console.log('new orientation is ', screen.orientation.type); })
-		//	console.dir(screen);
-		//	screen.lock('portrait-primary');
-//			screen.lockOrientation("portrait-primary");
-			//screen.orientation.lock("portrait-primary");
-
-// 		screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
-
-// 			if (screen.lockOrientationUniversal("portrait-primary")) {
-//   // orientation was locked
-// } else {
-//   // orientation lock failed
-// }
-
 
 		},
 

@@ -739,14 +739,13 @@ p {
 	font-size: .9em;
 	font-family: Roboto;
 	text-transform: uppercase;
-
-
  }
 
 
 .endmk-footer-links {
 	transform:skewY(2deg);
 	margin-top:25px;
+	z-index:500;
 	span { 
 		@include respond-min($bp-narrow) {
 			display:block;
