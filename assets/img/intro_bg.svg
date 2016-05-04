@@ -105,7 +105,7 @@
 	</radialGradient>
 	<path fill="url(#SVGID_10_)" d="M511.7,0l-37.3,37.3c0.3,0.3,0.5,0.5,0.9,0.7l38-38H511.7z"/>
 </g>
-<polygon points="612.3,793.1 272.3,793.1 272.3,537.2 612,565.5 "/>
+<polygon points="612.3,1013.1 272.3,1013.1 272.3,537.2 612,565.5 "/>
 <line fill="none" stroke="#53E27C" stroke-width="0.1" stroke-miterlimit="10" x1="544.1" y1="67.9" x2="612" y2="0"/>
 <line fill="none" stroke="#53E27C" stroke-width="0.1" stroke-miterlimit="10" x1="342.8" y1="86.3" x2="379.6" y2="49.4"/>
 <line fill="none" stroke="#53E27C" stroke-width="0.1" stroke-miterlimit="10" x1="502.6" y1="72.4" x2="533.6" y2="41.4"/>
@@ -135,5 +135,18 @@
 <g>
 	<line fill="none" stroke="#53E27C" stroke-width="0.1" stroke-miterlimit="10" x1="278.6" y1="448" x2="346.5" y2="380.2"/>
 	<line fill="none" stroke="#53E27C" stroke-width="0.1" stroke-miterlimit="10" x1="278.6" y1="448" x2="346.5" y2="380.2"/>
+</g>
+<g>
+	<line fill="none" stroke="#53E27C" stroke-width="0.1" stroke-miterlimit="10" x1="272.3" y1="793.2" x2="340.2" y2="725.3"/>
+	<line fill="none" stroke="#53E27C" stroke-width="0.1" stroke-miterlimit="10" x1="380.1" y1="757.8" x2="420.2" y2="717.7"/>
+</g>
+<g>
+	<path fill="none" stroke="#53E27C" stroke-width="0.1" stroke-miterlimit="10" d="M453.4,793.1"/>
+	<path fill="none" stroke="#53E27C" stroke-width="0.1" stroke-miterlimit="10" d="M613.5,633"/>
+	<line fill="none" stroke="#53E27C" stroke-width="0.1" stroke-miterlimit="10" x1="495.6" y1="750.9" x2="453.4" y2="793.1"/>
+	<line fill="none" stroke="#53E27C" stroke-width="0.1" stroke-miterlimit="10" x1="613.5" y1="633" x2="578.1" y2="668.4"/>
+</g>
+<g>
+	<line fill="none" stroke="#53E27C" stroke-width="0.1" stroke-miterlimit="10" x1="601.4" y1="679.1" x2="533.6" y2="747"/>
 </g>
 </svg>
