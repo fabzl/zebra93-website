@@ -127,7 +127,7 @@ var publicEl
 				 "transition": "all " + settings.animationTime + "ms " + settings.easing
 				});
 
-					pos = -pos*.25;
+					pos = -pos*.20;
 
 				//console.log ("pos : ", pos ); 
 				FBZ.view.$bg.css({

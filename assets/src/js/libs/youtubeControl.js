@@ -48,7 +48,7 @@ function onYouTubeIframeAPIReady() {
 				}
 		});
 		player4 = new YT.Player('ytp4', {
-				videoId: 'InGQ5SQvgXk',
+				videoId: 'Vw8jOHuH3wY',
 				playerVars: {
 						color: 'black',
 				},
@@ -125,10 +125,11 @@ function onYoutubeStateChange (e) {
 			
 			}else if (index === 4 ) {
 				player3.playVideo();
-			}
+
 			}else if (index === 5 ) {
 				player4.playVideo();
 			}
+		}
 	}
 
 

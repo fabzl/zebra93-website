@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="272.3 0 339.7 792" enable-background="new 272.3 0 339.7 792" xml:space="preserve">
+	 viewBox="272.3 0 339.7 1013.1" enable-background="new 272.3 0 339.7 1013.1" xml:space="preserve">
 <rect x="271.7" y="0" fill="#FAF8EC" width="340.3" height="143.5"/>
 <g>
 	<g>
@@ -148,5 +148,18 @@
 </g>
 <g>
 	<line fill="none" stroke="#53E27C" stroke-width="0.1" stroke-miterlimit="10" x1="601.4" y1="679.1" x2="533.6" y2="747"/>
+</g>
+<g>
+	<line fill="none" stroke="#53E27C" stroke-width="0.1" stroke-miterlimit="10" x1="272.3" y1="1013.1" x2="340.2" y2="945.2"/>
+	<line fill="none" stroke="#53E27C" stroke-width="0.1" stroke-miterlimit="10" x1="380.1" y1="977.7" x2="420.2" y2="937.6"/>
+</g>
+<g>
+	<path fill="none" stroke="#53E27C" stroke-width="0.1" stroke-miterlimit="10" d="M453.4,1013"/>
+	<path fill="none" stroke="#53E27C" stroke-width="0.1" stroke-miterlimit="10" d="M613.5,852.9"/>
+	<line fill="none" stroke="#53E27C" stroke-width="0.1" stroke-miterlimit="10" x1="495.6" y1="970.8" x2="453.4" y2="1013"/>
+	<line fill="none" stroke="#53E27C" stroke-width="0.1" stroke-miterlimit="10" x1="613.5" y1="852.9" x2="578.1" y2="888.3"/>
+</g>
+<g>
+	<line fill="none" stroke="#53E27C" stroke-width="0.1" stroke-miterlimit="10" x1="601.4" y1="899" x2="533.6" y2="966.9"/>
 </g>
 </svg>
